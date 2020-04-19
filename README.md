@@ -107,7 +107,6 @@ create index codigos_codigo_index
 
 ## Planeación
 - Validaciones y codigos de error.
-- Host de prueba en algun servidor.
 
 ## Contribuciones
 Son bienvenidas todas las ideas y mejoras que puedas aportar.
