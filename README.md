@@ -16,14 +16,19 @@
 ```text
 /api/codigos-postales/:estado/municipios/:municipio/ciudades/:ciudad
 ```
+- `:cp` número de código postal (5 dígitos)
+- `:estado` nombre del estado
+- `:municipio` nombre del municipio
+- `:ciudad` nombre de la ciudad
 
 ### Filtros
-Permite seleccionar solo algunos campos, al estar presente se aplicará también un GROUP BY de los campos
+Permite seleccionar solo algunos campos, al estar presente se aplicará también un GROUP BY de los campos.
 ```text
 ?filtros[campos]=nombre&filtros[campos]=nombre
 ```
 
 ### Ejemplos
+Si quisieras obtener todos los datos dependiendo del estado, municipio y ciudad.
 ```text
 /api/codigos-postales/estados/Baja%20California%20Sur/municipios/Comondu/ciudades/Ciudad%20Constitucion
 ```
@@ -37,9 +42,9 @@ Permite seleccionar solo algunos campos, al estar presente se aplicará también
         "asentamiento": "Zona Centro",
         "tipo_asentamiento": "Colonia"
     },
-    ...
 ]
 ```
+Si quisieras obtener la lista de estados del país
 ```text
 /api/codigos-postales?filtros[campos]=estado
 ```
@@ -51,9 +56,9 @@ Permite seleccionar solo algunos campos, al estar presente se aplicará también
     {
         "estado": "Baja California"
     },
-    ...
 ]
 ```
+Si quisieras obtener la lista de municipios de un estado
 ```text
 /api/codigos-postales/estados/Aguascalientes?filtros[campos]=estado&filtros[campos]=municipio
 ```
@@ -67,7 +72,6 @@ Permite seleccionar solo algunos campos, al estar presente se aplicará también
         "estado": "Aguascalientes",
         "municipio": "Asientos"
     },
-    ...
 ]
 ```
 
@@ -88,3 +92,13 @@ create table codigos_postales
 create index codigos_codigo_index
     on codigos_postales (codigo_postal);
 ```
+
+## Planeación
+- Validaciones y codigos de error.
+- Host de prueba en algun servidor.
+
+## Contribuciones
+Son bienvenidas todas las ideas y mejoras que puedas aportar.
+
+## Licencia
+GNU General Public License v3.0
