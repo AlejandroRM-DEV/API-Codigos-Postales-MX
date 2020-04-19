@@ -13,10 +13,10 @@ const query = function query(req, res, where) {
   ];
 
   const options = {};
-  if (req.query.filter !== undefined && req.query.filter.campos !== undefined) {
-    const campos = Array.isArray(req.query.filter.campos)
-      ? req.query.filter.campos.filter((key) => camposPermitidos.includes(key))
-      : [req.query.filter.campos];
+  if (req.query.filtros !== undefined && req.query.filtros.campos !== undefined) {
+    const campos = Array.isArray(req.query.filtros.campos)
+      ? req.query.filtros.campos.filter((key) => camposPermitidos.includes(key))
+      : [req.query.filtros.campos];
     options.attributes = campos;
     options.group = campos;
   } else {

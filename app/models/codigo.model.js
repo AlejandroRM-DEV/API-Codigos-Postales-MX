@@ -10,19 +10,19 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING(5),
       },
       estado: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(35),
       },
       municipio: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
       },
       ciudad: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
       },
       asentamiento: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(80),
       },
       tipo_asentamiento: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(25),
       },
     },
     {
