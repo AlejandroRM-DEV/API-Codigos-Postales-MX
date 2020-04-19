@@ -1,8 +1,8 @@
 module.exports = {
-  host: process.env.HOST || 'localhost',
-  user: process.env.USER || 'root',
-  passowrd: process.env.PASSWORD || '',
-  db: process.env.DB || 'codigos_postales',
+  host: 'localhost',
+  user: 'root',
+  passowrd: '',
+  db: 'codigos_postales',
   dialect: 'mysql',
   pool: {
     max: 5,
