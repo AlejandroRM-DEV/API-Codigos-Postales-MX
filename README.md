@@ -1,4 +1,16 @@
 # API de códigos postales de México
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![GitHub issues](https://img.shields.io/github/issues/AlejandroRM-DEV/API-Codigos-Postales-MX)](https://github.com/AlejandroRM-DEV/API-Codigos-Postales-MX/issues)
+
+## Pruebas
+Se ha publicado un versión de pruebas en Heroku, sin embargo, debido a las limitaciones del servicio gratuito sólo se cuenta con los datos de algunos estados.
+- Ciudad de México
+- México
+- Nuevo León
+```text
+https://codigos-postales-mx.herokuapp.com/api/codigos-postales?filtros[campos]=estado
+```
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Rutas
 ```text
