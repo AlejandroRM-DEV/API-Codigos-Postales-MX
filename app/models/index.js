@@ -1,23 +1,16 @@
-const config = require("../config/db.config.js");
+const Sequelize = require('sequelize');
+const config = require('../config/db.config.js');
 
-const Sequelize = require("sequelize");
-const sequelize = new Sequelize(config.DB, config.USER, config.PASSWORD, {
-  host: config.HOST,
+const sequelize = new Sequelize(config.db, config.user, config.password, {
+  host: config.host,
   dialect: config.dialect,
   operatorsAliases: '0',
-  pool: {
-    max: config.pool.max,
-    min: config.pool.min,
-    acquire: config.pool.acquire,
-    idle: config.pool.idle
-  }
+  pool: config.pool,
 });
 
 const db = {};
-
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-
-db.codigos = require("./codigo.model.js")(sequelize, Sequelize);
+db.CodigoPostal = require('./codigo.model.js')(sequelize, Sequelize);
 
 module.exports = db;

@@ -1,13 +1,13 @@
 module.exports = (sequelize, Sequelize) => {
-  const Codigo = sequelize.define(
-    "codigo",
+  const CodigoPostal = sequelize.define(
+    'codigos_postales',
     {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
       },
-      codigo: {
-        type: Sequelize.STRING,
+      codigo_postal: {
+        type: Sequelize.STRING(5),
       },
       estado: {
         type: Sequelize.STRING,
@@ -27,8 +27,7 @@ module.exports = (sequelize, Sequelize) => {
     },
     {
       timestamps: false,
-    }
+    },
   );
-
-  return Codigo;
+  return CodigoPostal;
 };
